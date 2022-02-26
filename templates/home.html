@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for dog in object_list %}
+<div class="dog-entry">
+<h2><a href="{% url 'dog_detail' dog.pk %}">{{ dog.name }}</a></h2>
+<p>{{ dog.age }}</p>
+</div>
+{% endfor %}
+{% endblock content %}
